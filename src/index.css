@@ -1,0 +1,85 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 98%;
+    --foreground: 220 10% 20%;
+    
+    /* Primary Colors */
+    --primary: 213 84% 30%;  /* #0C4B8D */
+    --primary-foreground: 0 0% 100%;
+    
+    /* Secondary Colors */
+    --secondary: 209 73% 42%;  /* #1D72B8 */
+    --secondary-foreground: 0 0% 100%;
+    
+    /* Accent Colors */
+    --accent: 214 80% 95%;  /* #E8F0FE */
+    --accent-foreground: 213 84% 30%;
+    
+    /* Neutral Colors */
+    --muted: 220 10% 40%;  /* #666666 */
+    --muted-foreground: 220 10% 40%;
+    
+    /* UI Elements */
+    --card: 0 0% 100%;
+    --card-foreground: 220 10% 20%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 10% 20%;
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --ring: 213 84% 30%;
+    
+    /* Semantic Colors */
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 220 10% 10%;
+    --foreground: 0 0% 98%;
+    
+    --primary: 213 84% 30%;
+    --primary-foreground: 0 0% 100%;
+    
+    --secondary: 209 73% 42%;
+    --secondary-foreground: 0 0% 100%;
+    
+    --accent: 214 80% 15%;
+    --accent-foreground: 214 80% 95%;
+    
+    --muted: 220 10% 40%;
+    --muted-foreground: 220 10% 60%;
+    
+    --card: 220 10% 13%;
+    --card-foreground: 0 0% 98%;
+    --popover: 220 10% 13%;
+    --popover-foreground: 0 0% 98%;
+    --border: 220 10% 20%;
+    --input: 220 10% 20%;
+    --ring: 213 84% 30%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+  h1 {
+    @apply text-4xl font-bold tracking-tight;
+  }
+  h2 {
+    @apply text-2xl font-semibold tracking-tight;
+  }
+  h3 {
+    @apply text-xl font-semibold tracking-tight;
+  }
+}
